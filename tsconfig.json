@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "sourceMap": true
+  },
+  /*
+  "files": [
+    "./app/app.ts",
+    "typings/index.d.ts"
+  ],*/
+  "exclude": ["node_modules"]
+}
