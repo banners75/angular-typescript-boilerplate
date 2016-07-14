@@ -71,14 +71,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\about\about.html" />
+    <Content Include="app\contact\contact.html" />
     <Content Include="app\home\home.html" />
+    <Content Include="gulpfile.js" />
     <Content Include="index.html" />
+    <Content Include="karma.conf.js" />
     <Content Include="package.json" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\about\about.controller.ts" />
     <TypeScriptCompile Include="app\app.ts" />
+    <TypeScriptCompile Include="app\contact\contact.controller.ts" />
     <TypeScriptCompile Include="app\home\home.controller.ts" />
+    <TypeScriptCompile Include="tests\about\about.controller.spec.ts" />
+    <TypeScriptCompile Include="tests\test.app.ts" />
     <TypeScriptCompile Include="typings\globals\angular-ui-router\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\angular\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
@@ -94,6 +102,9 @@
     <Content Include="typings\globals\angular-ui-router\typings.json" />
     <Content Include="typings\globals\angular\typings.json" />
     <Content Include="typings\globals\jquery\typings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="typings.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

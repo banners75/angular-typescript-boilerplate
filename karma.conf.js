@@ -11,8 +11,8 @@ module.exports = function (config) {
             "tests/**/*.spec.ts"
         ],
         preprocessors: {
-            "tests/test.app.ts": ["webpack", "sourcemap"],
-            "tests/**/*.spec.ts": ["webpack", "sourcemap"]
+            "tests/test.app.ts": ["webpack"],
+            "tests/**/*.spec.ts": ["webpack"]
         },
 
         webpack: webpackConfig,

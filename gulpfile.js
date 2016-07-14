@@ -3,7 +3,7 @@ var Server = require("karma").Server;
 var webpack = require("webpack");
 var webpackConfig = require("./webpack.config.js");
 var WebpackDevServer = require("webpack-dev-server");
-var gutil = require('gulp-util');
+var gutil = require("gulp-util");
 
 gulp.task("test", function (done) {
     new Server({
@@ -19,15 +19,15 @@ gulp.task("build", function (done) {
 function onBuild(done) {
     return function(err, stats) {
         if (err) {
-            gutil.log('Error', err);
+            gutil.log("Error", err);
             if (done) {
                 done();
             }
         } else {
             Object.keys(stats.compilation.assets).forEach(function(key) {
-                gutil.log('Webpack: output ', gutil.colors.green(key));
+                gutil.log("Webpack: output ", gutil.colors.green(key));
             });
-            gutil.log('Webpack: ', gutil.colors.blue('finished ', stats.compilation.name));
+            gutil.log("Webpack: ", gutil.colors.green("finished"));
             if (done) {
                 done();
             }
