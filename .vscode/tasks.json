@@ -7,12 +7,13 @@
 
     "tasks": [
         {
-			"args": ["test"],
+			"args": ["build"],
 			"suppressTaskName": true,
-			"taskName": "test",
+			"taskName": "build",
 			"isBuildCommand": true
 		},
 		{
+			"args": ["test"],
 			"taskName": "test",
 			"isTestCommand": true,
 			"isBuildCommand": false

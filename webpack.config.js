@@ -3,7 +3,7 @@
 module.exports = {
     entry: "./app/app.ts",
     output: {
-        path: "./dist/",
+        path: __dirname + "/dist/",
         filename: "[name].js",
         sourceMapFileName: "[file].map"
     },
