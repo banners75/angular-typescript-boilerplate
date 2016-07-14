@@ -1,25 +1,20 @@
 {
     "version": "0.1.0",
-    "command": "webpack",
+    "command": "gulp",
     "isShellCommand": true,
-    "args": ["-d"],
+    "args": [],
     "showOutput": "always",
 
     "tasks": [
         {
-			"args": [
-				"-d" 
-			],
+			"args": ["test"],
 			"suppressTaskName": true,
-			"taskName": "webpack dev",
+			"taskName": "test",
 			"isBuildCommand": true
 		},
 		{
-			"args": [
-				"-p"
-			],
-			"suppressTaskName": true,
-			"taskName": "webpack dist",
+			"taskName": "test",
+			"isTestCommand": true,
 			"isBuildCommand": false
 		}
     ]

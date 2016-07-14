@@ -42,21 +42,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!********************!*\
-  !*** ./app/app.ts ***!
-  \********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/// <reference path="../typings/globals/angular/index.d.ts" />
 	"use strict";
-	angular = __webpack_require__(/*! angular */ 1);
-	var uiRouter = __webpack_require__(/*! angular-ui-router */ 3);
-	var Home = __webpack_require__(/*! ./home/home.html */ 4);
-	var home_controller_1 = __webpack_require__(/*! ./home/home.controller */ 5);
+	/// <reference path="../typings/globals/angular/index.d.ts" />
+	angular = __webpack_require__(1);
+	var uiRouter = __webpack_require__(3);
+	var Home = __webpack_require__(4);
+	var About = __webpack_require__(5);
+	var Contact = __webpack_require__(6);
+	var home_controller_1 = __webpack_require__(7);
+	var about_controller_1 = __webpack_require__(8);
+	var contact_controller_1 = __webpack_require__(9);
 	var App;
 	(function (App) {
 	    var app = angular.module("app", [uiRouter]);
 	    app.controller("homeController", home_controller_1.HomeController);
+	    app.controller("aboutController", about_controller_1.AboutController);
+	    app.controller("contactController", contact_controller_1.ContactController);
 	    app.config(function ($stateProvider, $urlRouterProvider) {
 	        $urlRouterProvider.otherwise("/");
 	        $stateProvider
@@ -69,6 +72,26 @@
 	            onExit: function () {
 	                console.log("Exiting state home");
 	            }
+	        })
+	            .state("about", {
+	            url: "/about",
+	            template: About,
+	            onEnter: function () {
+	                console.log("Entering state about");
+	            },
+	            onExit: function () {
+	                console.log("Exiting state about");
+	            }
+	        })
+	            .state("contact", {
+	            url: "/contact",
+	            template: Contact,
+	            onEnter: function () {
+	                console.log("Entering state contact");
+	            },
+	            onExit: function () {
+	                console.log("Exiting state contact");
+	            }
 	        });
 	    });
 	})(App || (App = {}));
@@ -76,20 +99,14 @@
 
 /***/ },
 /* 1 */
-/*!****************************!*\
-  !*** ./~/angular/index.js ***!
-  \****************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(/*! ./angular */ 2);
+	__webpack_require__(2);
 	module.exports = angular;
 
 
 /***/ },
 /* 2 */
-/*!******************************!*\
-  !*** ./~/angular/angular.js ***!
-  \******************************/
 /***/ function(module, exports) {
 
 	/**
@@ -31568,9 +31585,6 @@
 
 /***/ },
 /* 3 */
-/*!**********************************************************!*\
-  !*** ./~/angular-ui-router/release/angular-ui-router.js ***!
-  \**********************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -36152,18 +36166,24 @@
 
 /***/ },
 /* 4 */
-/*!****************************!*\
-  !*** ./app/home/home.html ***!
-  \****************************/
 /***/ function(module, exports) {
 
 	module.exports = "<div ng-controller=\"homeController as vm\" class=\"jumbotron text-center\">\r\n    <h1>Home Page</h1>\r\n\r\n    <p> {{vm.message}} </p>\r\n\r\n</div>\r\n";
 
 /***/ },
 /* 5 */
-/*!*************************************!*\
-  !*** ./app/home/home.controller.ts ***!
-  \*************************************/
+/***/ function(module, exports) {
+
+	module.exports = "<div ng-controller=\"aboutController as vm\" class=\"jumbotron text-center\">\r\n    <h1>About Page</h1>\r\n\r\n    <p> {{vm.message}} </p>\r\n\r\n</div>\r\n";
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = "<div ng-controller=\"contactController as vm\" class=\"jumbotron text-center\">\r\n    <h1>Contact Page</h1>\r\n\r\n    <p> {{vm.message}} </p>\r\n\r\n</div>\r\n";
+
+/***/ },
+/* 7 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36174,6 +36194,34 @@
 	    return HomeController;
 	}());
 	exports.HomeController = HomeController;
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	"use strict";
+	var AboutController = (function () {
+	    function AboutController() {
+	        this.message = "this is the about controller";
+	    }
+	    return AboutController;
+	}());
+	exports.AboutController = AboutController;
+
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	"use strict";
+	var ContactController = (function () {
+	    function ContactController() {
+	        this.message = "this is the contact controller";
+	    }
+	    return ContactController;
+	}());
+	exports.ContactController = ContactController;
 
 
 /***/ }
