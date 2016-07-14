@@ -1,5 +1,4 @@
 ﻿"use strict";
-var webpack = require("webpack");
 
 module.exports = {
     entry: "./app/app.ts",
@@ -24,11 +23,5 @@ module.exports = {
     resolve: {
         extensions: ["",".ts",".js",".es6"]
     },
-    plugins: [
-      new webpack.SourceMapDevToolPlugin({
-          filename: null, // if no value is provided the sourcemap is inlined
-          test: /\.(ts|js)($|\?)/i // process .js and .ts files only
-      })
-    ],
     devtool: "source-map"
 };
