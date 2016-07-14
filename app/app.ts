@@ -1,11 +1,9 @@
 ﻿/// <reference path="../typings/globals/angular/index.d.ts" />
-declare function require(name: string): any;
 
-require("angular");
-var uiRouter = require("angular-ui-router");
-
-import {HomeController} from "./home/home.controller";
+angular =  require("angular");
+var uiRouter =  require("angular-ui-router");
 var Home = require("./home/home.html");
+import { HomeController } from "./home/home.controller";
 
 module App{
 
@@ -18,7 +16,6 @@ module App{
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            // route for the home page
             .state("home", {
                 url: "/home",
                 template: Home,

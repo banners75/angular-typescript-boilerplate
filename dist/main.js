@@ -47,12 +47,12 @@
   \********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
 	/// <reference path="../typings/globals/angular/index.d.ts" />
-	__webpack_require__(/*! angular */ 1);
+	"use strict";
+	angular = __webpack_require__(/*! angular */ 1);
 	var uiRouter = __webpack_require__(/*! angular-ui-router */ 3);
-	var home_controller_1 = __webpack_require__(/*! ./home/home.controller */ 4);
-	var Home = __webpack_require__(/*! ./home/home.html */ 5);
+	var Home = __webpack_require__(/*! ./home/home.html */ 4);
+	var home_controller_1 = __webpack_require__(/*! ./home/home.controller */ 5);
 	var App;
 	(function (App) {
 	    var app = angular.module("app", [uiRouter]);
@@ -36152,6 +36152,15 @@
 
 /***/ },
 /* 4 */
+/*!****************************!*\
+  !*** ./app/home/home.html ***!
+  \****************************/
+/***/ function(module, exports) {
+
+	module.exports = "<div ng-controller=\"homeController as vm\" class=\"jumbotron text-center\">\r\n    <h1>Home Page</h1>\r\n\r\n    <p> {{vm.message}} </p>\r\n\r\n</div>\r\n";
+
+/***/ },
+/* 5 */
 /*!*************************************!*\
   !*** ./app/home/home.controller.ts ***!
   \*************************************/
@@ -36166,15 +36175,6 @@
 	}());
 	exports.HomeController = HomeController;
 
-
-/***/ },
-/* 5 */
-/*!****************************!*\
-  !*** ./app/home/home.html ***!
-  \****************************/
-/***/ function(module, exports) {
-
-	module.exports = "<div ng-controller=\"homeController as vm\" class=\"jumbotron text-center\">\r\n    <h1>Home Page</h1>\r\n\r\n    <p> {{vm.message}} </p>\r\n\r\n</div>\r\n";
 
 /***/ }
 /******/ ]);
