@@ -5,8 +5,6 @@ var uiRouter =  require("angular-ui-router");
 var Home = require("./home/home.html");
 import { HomeController } from "./home/home.controller";
 
-var x = 10;
-
 module App{
 
     var app = angular.module("app", [uiRouter]);
